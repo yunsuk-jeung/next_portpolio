@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon, SunMoon } from "lucide-react";
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
@@ -17,6 +17,7 @@ const ThemeDropdown = () => {
   const [mounted, setMounted] = useState(false);
 
   const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -40,12 +41,26 @@ const ThemeDropdown = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <DropdownMenuCheckboxItem
+          checked={theme === "system"}
+          onClick={() => setTheme("system")}
+        >
+          System
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          checked={theme === "light"}
+          onClick={() => setTheme("light")}
+        >
+          Light
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          checked={theme === "dark"}
+          onClick={() => setTheme("dark")}
+        >
+          Dark
+        </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
     // <div className="flex flex-col  items-center">
