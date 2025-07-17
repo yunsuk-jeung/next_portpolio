@@ -26,17 +26,20 @@ const ThemeDropdown = () => {
   if (!mounted) {
     return null;
   }
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost">
+        <Button
+          variant="ghost"
+          // size="icon"
+          className="p-0 flex items-center justify-center"
+        >
           {theme === "system" ? (
-            <SunMoon />
+            <SunMoon className="size-6" />
           ) : theme === "dark" ? (
-            <MoonIcon />
+            <MoonIcon className="size-6" />
           ) : (
-            <SunIcon />
+            <SunIcon className="size-6" />
           )}
         </Button>
       </DropdownMenuTrigger>
