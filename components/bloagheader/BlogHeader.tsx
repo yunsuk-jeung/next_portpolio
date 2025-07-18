@@ -1,14 +1,30 @@
+"use client";
 // import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import ThemeDropdown from "./ThemeDropdown";
+import { useEffect, useState } from "react";
 
 const BlogHeader = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full border-b">
+    <header
+      className={`sticky top-0 z-50 transition-colors duration-75 ${
+        isScrolled ? "shadow-md bg-primary" : "bg-background"
+      }`}
+    >
+      {/* <header className="w-full border-b border-primary static"> */}
       <div className="wrapper">
         <div className="flex justify-between items-center">
-          <span className="font-bold text-3xl">DevJeung</span>
+          <span className="font-bold text-3xl ">Yunsuk Jeung</span>
           {/* <div className="flex gap-4 items-center justify-center"> */}
           <ThemeDropdown />
           {/* <nav className="flex gap-4"> */}
