@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 // import Image from "next/image";
 import ThemeDropdown from "./ThemeDropdown";
 import { useEffect, useState } from "react";
@@ -24,7 +25,9 @@ const BlogHeader = () => {
       {/* <header className="w-full border-b border-primary static"> */}
       <div className="wrapper">
         <div className="flex justify-between items-center">
-          <span className="font-bold text-3xl ">Yunsuk Jeung</span>
+          <Link href="/">
+            <span className="font-bold text-3xl ">Yunsuk Jeung</span>
+          </Link>
           {/* <div className="flex gap-4 items-center justify-center"> */}
           <ThemeDropdown />
           {/* <nav className="flex gap-4"> */}

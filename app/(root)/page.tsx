@@ -1,10 +1,13 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogHome = () => {
   const IntroSection = () => (
     <div className="pb-4 mb-8 border-b border-primary">
       <div className="ml-4">
-        <div className=" grid grid-cols-1 space-y-4 md:grid-cols-2 md:space-x-6 md:grid-cols-[auto_1fr]">
+        <div className=" grid grid-cols-1 space-y-4 md:space-x-6 md:grid-cols-[auto_1fr]">
           <div className="flex justify-center">
             <Image
               src={"/me.webp"}
@@ -23,6 +26,7 @@ const BlogHome = () => {
                 <li>ex - Software Engineer @ MarsAuto</li>
                 <li>ex - Software Engineer @ Maxst</li>
                 <li>
+                  contact:{" "}
                   <a
                     href="mailto:yunsukjeung@snu.ac.kr"
                     className="text-blue-600  hover:text-blue-800"
@@ -46,6 +50,14 @@ const BlogHome = () => {
                       [GitHub]
                     </a>
                   </div>
+                </li>
+                <li></li>
+                <li>
+                  <Button asChild className="">
+                    <Link href={"/projects"}>
+                      Projects <ArrowRight />
+                    </Link>
+                  </Button>
                 </li>
               </ul>
             </div>
@@ -148,12 +160,15 @@ const BlogHome = () => {
       </>
     );
   };
+
+  const Project = () => <>Projects</>;
   return (
     <div className="w-full">
       <IntroSection />
       <WelcomSection />
       <WorkExperience />
       <Publication />
+      <Project />
     </div>
   );
 };
