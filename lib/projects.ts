@@ -8,8 +8,8 @@ export const PROJECT_THUMBNAILS = {
   },
   stereo: {
     url: "https://youtu.be/HuOPfsnD53M",
-    title: "Stereo slam for smart glasses",
-    description: "Stereo Visual-Inertial slam for Mobile/Wearable & Robots.",
+    title: "Stereo SLAM for smart glasses",
+    description: "Stereo Visual-Inertial SLAM for Mobile/Wearable & Robots.",
     code: "",
   },
   maxscan: {
@@ -22,7 +22,7 @@ export const PROJECT_THUMBNAILS = {
   senfu: {
     url: "https://www.youtube.com/watch?v=IOkATKE9gbk&ab_channel=MAXST",
     title: "Sensor Fusion SLAM",
-    description: "Mono Visual-Inertial slam for Mobile/Wearable & Robots.",
+    description: "Mono Visual-Inertial SLAM for Mobile/Wearable & Robots.",
     code: "",
   },
   squareroot: {

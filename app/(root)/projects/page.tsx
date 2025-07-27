@@ -26,7 +26,7 @@ function renderProjectItem(
       key={key}
       className="flex flex-col md:flex-row items-center gap-4 border-b border-primary pb-6"
     >
-      <div className="w-2/5 flex-shrink-0">
+      <div className="w-4/5 md:w-2/5 flex-shrink-0">
         <Image
           src={thumbnailUrl}
           alt={key}
@@ -35,7 +35,7 @@ function renderProjectItem(
           height={240}
         />
       </div>
-      <div className="w-full md:w-1/2 px-20 md:px-5">
+      <div className="w-full md:w-1/2 px-2 md:px-5">
         <Link
           href={`projects/${key}`}
           className="underline text-blue-800 hover:text-blue-800 visited:text-purple-600"

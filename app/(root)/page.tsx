@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,8 +25,8 @@ const BlogHome = () => {
                 <li>MS in Computer Science (Data Science and AI) @ USYD</li>
                 <li>ex - Software Engineer @ MarsAuto</li>
                 <li>ex - Software Engineer @ Maxst</li>
-                <li>
-                  contact:{" "}
+                <li className="flex items-center gap-2">
+                  <Mail className="inline size-4" />
                   <a
                     href="mailto:yunsukjeung@snu.ac.kr"
                     className="text-blue-600  hover:text-blue-800"
@@ -34,17 +34,26 @@ const BlogHome = () => {
                     yunsukjeung@snu.ac.kr
                   </a>
                 </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="inline size-4" />{" "}
+                  <a
+                    href="tel:+61433430752"
+                    className="text-blue-600  hover:text-blue-800"
+                  >
+                    (+61) 433 430 752
+                  </a>
+                </li>
                 <li>
                   <div className="flex items-start space-x-2">
                     <a
-                      href=""
+                      href="https://www.linkedin.com/in/yunsuk-jeung"
                       className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"
                     >
                       [LinkedIn]
                     </a>
 
                     <a
-                      href=""
+                      href="https://www.github.com/yunsuk-jeung"
                       className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"
                     >
                       [GitHub]

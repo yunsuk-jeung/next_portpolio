@@ -26,7 +26,7 @@ const YoutubePlayer: React.FC<YoutubeProps> = ({
   if (!videoId) return null;
 
   return (
-    <div className="aspect-w-16 aspect-h-9 w-full">
+    <div className="aspect-w-16 aspect-h-9 w-full border dark:border-white">
       <iframe
         width={width}
         height={height}
