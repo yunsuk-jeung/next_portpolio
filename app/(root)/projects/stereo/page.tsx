@@ -1,6 +1,5 @@
 import YoutubePlayer from "@/components/youtube";
 import { PROJECT_THUMBNAILS } from "@/lib/projects";
-import Image from "next/image";
 
 const StereoPage = () => {
   const stereo = PROJECT_THUMBNAILS.stereo;
@@ -74,6 +73,13 @@ const StereoPage = () => {
             macOS, Windows, and ROS
           </li>
         </ul>
+      </div>
+      <div className="w-4/5 md:max-w-3/5 mx-auto mb-2 ">
+        <YoutubePlayer url="https://youtu.be/81EN00zAKXo" />
+        <div className="flex">
+          <YoutubePlayer url="https://www.youtube.com/shorts/_kZH7Gbe2R0?feature=share" />
+          <YoutubePlayer url="https://www.youtube.com/shorts/2bFZqzzupN0?feature=share" />
+        </div>
       </div>
       <div className="mb-2">
         <h2 className="text-2xl font-bold text-primary">Result</h2>
