@@ -3,6 +3,7 @@ import Link from "next/link";
 // import Image from "next/image";
 import ThemeDropdown from "./ThemeDropdown";
 import { useEffect, useState } from "react";
+import CategoryDrawer from "./CategoryDrawer";
 
 const BlogHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +26,7 @@ const BlogHeader = () => {
       {/* <header className="w-full border-b border-primary static"> */}
       <div className="wrapper">
         <div className="flex justify-between items-center">
+          <CategoryDrawer />
           <Link href="/">
             <span className="font-bold text-3xl ">Yunsuk Jeung</span>
           </Link>

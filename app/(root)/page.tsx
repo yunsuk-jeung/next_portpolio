@@ -64,7 +64,7 @@ const BlogHome = () => {
                 <li>
                   <Button asChild className="">
                     <Link href={"/projects"}>
-                      Projects <ArrowRight />
+                      Explore Projects <ArrowRight />
                     </Link>
                   </Button>
                 </li>
@@ -170,14 +170,12 @@ const BlogHome = () => {
     );
   };
 
-  const Project = () => <>Projects</>;
   return (
     <div className="w-full">
       <IntroSection />
       <WelcomSection />
       <WorkExperience />
       <Publication />
-      <Project />
     </div>
   );
 };
